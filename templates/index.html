@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block main %}
+<main>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <a href="{{ post.canonical_url }}">
+                <span>{{ post.title }}</span>
+                <span>.........</span>
+                <time>{{ post.date }}</time>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock main %}
+{% block footer %}
+<footer>
+    <p>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+            豫ICP备2025127304号-1
+        </a>
+    </p>
+</footer>
+{% endblock footer %}
